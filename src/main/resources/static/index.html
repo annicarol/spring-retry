@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+	  $('input').on('keypress', function (event) {
+    	 if(event.charCode < 48 || event.charCode > 57) return false;
+    });
+	  
+  $("#enviar").click(function() {
+	  alert( "Handler for .click() called." );
+	});
+	  
+  });
+</script>
+</head>
+<body>
+	<h1>Definições de configuração do Retry:</h1>
+
+	<form>
+		<div>
+			Máximo de Tentativas: <input name="maxTentativas">
+		</div>
+		<br>
+		<div>
+			Máximo de tempo de espera: <input name="tempoMaximo">
+		</div>
+	<br>
+	<button id="enviar" type="submit">Atualizar</button>	
+	</form>
+
+</body>
+</html>
